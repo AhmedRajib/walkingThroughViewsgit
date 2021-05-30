@@ -15,10 +15,12 @@ struct ContentView: View {
 
 struct HomeView: View {
     var body: some View {
+        
         Text("Welcome to Home!!!")
             .font(.title)
             .fontWeight(.bold)
     }
+
 }
 
 struct OnBordingview: View {
@@ -49,8 +51,7 @@ struct OnBordingview: View {
             }
             
             if currentPage == 5 {
-                ScreenView(image: "", title: "", details: "", bgColor: .white)
-                    .transition(.scale)
+               HomeView()
             }
             
             Spacer(minLength: 20)
