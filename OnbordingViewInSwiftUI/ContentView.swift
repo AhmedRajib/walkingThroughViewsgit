@@ -30,18 +30,27 @@ struct OnBordingview: View {
             
             if currentPage == 1 {
                 ScreenView(image: "Onboarding.Step.01", title: "Step 1", details: "", bgColor: .orange)
+                    .transition(.scale)
             }
             
             if currentPage == 2 {
                 ScreenView(image: "Onboarding.Step.02", title: "Step 2", details: "", bgColor: .yellow)
+                    .transition(.scale)
             }
             
             if currentPage == 3 {
                 ScreenView(image: "Onboarding.Step.03", title: "Step 3", details: "", bgColor: .blue)
+                    .transition(.scale)
             }
             
             if currentPage == 4 {
                 ScreenView(image: "Onboarding.Step.04", title: "Step 4", details: "", bgColor: .green)
+                    .transition(.scale)
+            }
+            
+            if currentPage == 5 {
+                ScreenView(image: "", title: "", details: "", bgColor: .white)
+                    .transition(.scale)
             }
             
             Spacer(minLength: 20)
@@ -122,13 +131,14 @@ struct ScreenView: View {
                             .padding(.horizontal)
                             .background(Color.black.opacity(0.4))
                             .cornerRadius(10)
+                            .padding(.bottom, 15)
                     })
                 }
                 Spacer()
                 
                 Button(action: {
                     withAnimation(.easeInOut) {
-                        
+                        currentPage = 5
                     }
                 }, label: {
                     Text("Skip")
