@@ -61,8 +61,6 @@ struct OnBordingview: View {
                 withAnimation(.easeInOut) {
                     if currentPage <= totalPage {
                         currentPage += 1
-
-                        print("Hello World ", currentPage)
                     }else {
                         currentPage = 1
                     }
@@ -120,7 +118,7 @@ struct ScreenView: View {
                         .font(.title)
                         .fontWeight(.semibold)
                         .kerning(1.3)
-                        .padding(.init(top: 0, leading: 16, bottom: 16, trailing: 16))
+                        .padding(.init(top: 0, leading: 8, bottom: 0, trailing: 12))
                 } else {
                     // create Back Button
                     Button(action: {
@@ -132,7 +130,7 @@ struct ScreenView: View {
                             .padding(.horizontal)
                             .background(Color.black.opacity(0.4))
                             .cornerRadius(10)
-                            .padding(.bottom, 15)
+                            .padding(.bottom, 12)
                     })
                 }
                 Spacer()
@@ -145,7 +143,7 @@ struct ScreenView: View {
                     Text("Skip")
                         .fontWeight(.semibold)
                         .kerning(1.3)
-                        .padding(.init(top: 0, leading: 16, bottom: 16, trailing: 16))
+                        .padding(.init(top: 0, leading: 0, bottom: 0, trailing: 16))
                 })
                 
             }
